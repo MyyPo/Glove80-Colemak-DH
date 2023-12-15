@@ -221,8 +221,10 @@
 #define POS_RH_C6R5 63
 #define POS_RH_C6R6 79
 
-&mt {
-    tapping-term-ms = <50>;
+/ {
+    &mt {
+        tapping-term-ms = <50>;
+    };
 };
 
 / {
