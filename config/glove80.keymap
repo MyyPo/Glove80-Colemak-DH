@@ -10,6 +10,11 @@
 #define LAYER_Nav_Num 2
 #define LAYER_Magic 3
 
+&mt {
+   tapping-term-ms = <50>;
+   retro-tap;
+};
+
 / {
     macros {
         rgb_ug_status_macro: rgb_ug_status_macro {
@@ -221,11 +226,6 @@
 #define POS_RH_C6R5 63
 #define POS_RH_C6R6 79
 
-/ {
-    &mt {
-        tapping-term-ms = <50>;
-    };
-};
 
 / {
     keymap {
