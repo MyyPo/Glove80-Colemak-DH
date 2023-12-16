@@ -280,23 +280,23 @@
 
         layer_Base {
             bindings = <
- &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                       &none      &none    &none     &none  &magic LAYER_Magic 0
-                &none   &none   &none   &none   &none   &none                                                                       &none   &none      &none    &none     &none                 &none
-                &none   &as Q   &as W   &as F   &as P   &as B                                                                       &as J   &as L      &as U    &as Y   &as SQT                 &none
-                &none   &as A   &as R   &as S   &as T   &as G                                                                       &as M   &as N      &as E    &as I     &as O                 &none
-                &none   &as Z   &as X   &as C   &as D   &as V  &kp LALT           &none   &none   &none      &none  &kp LSHFT       &as K   &as H  &as COMMA  &as DOT  &as FSLH                 &none
-                &none   &none   &none   &none   &none          &mt LCTRL ESC  &kp BSPC    &none   &none  &lt 2 RET    &lt 1 SPACE           &none      &none    &none     &none                 &none
+ &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                            &none      &none    &none     &none  &magic LAYER_Magic 0
+                &none   &none   &none   &none   &none   &none                                                                            &none   &none      &none    &none     &none                 &none
+                &none   &as Q   &as W   &as F   &as P   &as B                                                                            &as J   &as L      &as U    &as Y   &as SQT                 &none
+                &none   &as A   &as R   &as S   &as T   &as G                                                                            &as M   &as N      &as E    &as I     &as O                 &none
+                &none   &as Z   &as X   &as C   &as D   &as V  &kp CAPS           &none        &none   &none      &none    &kp LSHFT     &as K   &as H  &as COMMA  &as DOT  &as FSLH                 &none
+                &none   &none   &none   &none   &none          &mt LCTRL ESC  &mt LALT BSPC    &none   &none  &lt 2 RET    &lt 1 SPACE           &none      &none    &none     &none                 &none
             >;
         };
 
         layer_Symbol {
             bindings = <
-  &none      &none      &none      &none      &none                                                                                             &none     &none     &none      &none   &none
-  &none      &none      &none      &none      &none    &none                                                                          &none     &none     &none     &none      &none   &none
-  &none      &none     &kp AT   &kp DLLR   &kp HASH    &none                                                                       &kp BSLH  &kp EXCL  &kp AMPS  &kp PIPE      &none   &none
-  &none  &kp UNDER   &kp SEMI  &kp COLON  &kp EQUAL  &kp TAB                                                                       &kp PLUS  &kp LPAR  &kp LBRC  &kp LBKT  &kp MINUS   &none
-  &none      &none  &kp PRCNT  &kp GRAVE  &kp TILDE    &none  &kp LALT           &none   &none   &none      &none  &kp LSHFT       &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT      &none   &none
-  &none      &none      &none      &none      &none           &mt LCTRL ESC  &kp BSPC    &none   &none  &lt 2 RET    &lt 1 SPACE                &none     &none     &none      &none   &none
+  &none      &none      &none      &none      &none                                                                                               &none     &none     &none      &none   &none
+  &none      &none      &none      &none      &none    &none                                                                            &none     &none     &none     &none      &none   &none
+  &none      &none     &kp AT   &kp DLLR   &kp HASH    &none                                                                            &kp BSLH  &kp EXCL  &kp AMPS  &kp PIPE      &none   &none
+  &none  &kp UNDER   &kp SEMI  &kp COLON  &kp EQUAL  &kp TAB                                                                            &kp PLUS  &kp LPAR  &kp LBRC  &kp LBKT  &kp MINUS   &none
+  &none      &none  &kp PRCNT  &kp GRAVE  &kp TILDE    &none  &kp CAPS           &none        &none   &none      &none  &kp LSHFT       &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT      &none   &none
+  &none      &none      &none      &none      &none           &mt LCTRL ESC  &mt LALT BSPC    &none   &none  &lt 2 RET    &lt 1 SPACE                &none     &none     &none      &none   &none
             >;
         };
 
@@ -305,9 +305,9 @@
   &none   &none   &none   &none   &none                                                                                           &none   &none      &none   &none   &none
   &none   &none   &none   &none   &none   &none                                                                         &none     &none   &none      &none   &none   &none
   &none   &none  &kp N6  &kp N5  &kp N4   &none                                                                         &none     &none   &none      &none   &none   &none
-  &none  &kp N0  &kp N3  &kp N2  &kp N1   &none                                                                      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT   &none   &none
-  &none   &none  &kp N9  &kp N8  &kp N7   &none  &kp LALT           &none   &none   &none      &none  &kp LSHFT         &none    &kp F5  &kp F6    &kp F12   &none   &none
-  &none   &none   &none   &none   &none          &mt LCTRL ESC  &kp BSPC    &none   &none  &lt 2 RET    &lt 1 SPACE               &none   &none      &none   &none   &none
+  &none  &kp N0  &kp N3  &kp N2  &kp N1   &none                                                                         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT   &none   &none
+  &none   &none  &kp N9  &kp N8  &kp N7   &none  &kp CAPS       &none            &none   &none  &none        &kp LSHFT  &none     &kp F5  &kp F6    &kp F12   &none   &none
+  &none   &none   &none   &none   &none          &mt LCTRL ESC  &mt LALT BSPC    &none   &none  &lt 2 RET    &lt 1 SPACE          &none   &none      &none   &none   &none
             >;
         };
 
