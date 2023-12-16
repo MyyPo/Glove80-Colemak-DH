@@ -15,6 +15,11 @@
    retro-tap;
 };
 
+&lt {
+   tapping-term-ms = <50>;
+   retro-tap;
+};
+
 / {
     macros {
         rgb_ug_status_macro: rgb_ug_status_macro {
