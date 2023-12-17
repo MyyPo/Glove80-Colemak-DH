@@ -11,13 +11,13 @@
 #define LAYER_Magic 3
 
 &mt {
-   tapping-term-ms = <50>;
+   tapping-term-ms = <35>;
    retro-tap;
    flavor = "tap-preferred";
 };
 
 &lt {
-   tapping-term-ms = <50>;
+   tapping-term-ms = <35>;
    retro-tap;
    flavor = "tap-preferred";
    require-prior-idle-ms = <125>;
@@ -236,44 +236,6 @@
 
 
 / {
-     behaviors {
-        as_ht: autoshift_hold_tap {
-          compatible = "zmk,behavior-hold-tap";
-          label = "AUTOSHIFT_HOLD_TAP";
-          #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          bindings = <&shifted>, <&kp>;
-        };
-      };
-
-      macros {
-        shifted: macro_shifted_kp {
-          #binding-cells = <1>;
-          label = "MACRO_SHIFTED_KP";
-          compatible = "zmk,behavior-macro-one-param";
-          bindings =
-            <&macro_press &kp LSHFT>,
-            <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
-            <&macro_release &kp LSHFT>;
-        };
-
-        as: autoshift {
-          compatible = "zmk,behavior-macro-one-param";
-          #binding-cells = <1>;
-          label = "AUTOSHIFT_KP";
-          bindings =
-            <&macro_press>,
-            <&macro_param_1to1>,
-            <&macro_param_1to2>,
-            <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
-            <&macro_pause_for_release>,
-            <&macro_release>,
-            <&macro_param_1to1>,
-            <&macro_param_1to2>,
-            <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
-        };
-      };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -282,10 +244,10 @@
             bindings = <
  &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                            &none      &none    &none     &none  &magic LAYER_Magic 0
                 &none   &none   &none   &none   &none   &none                                                                            &none   &none      &none    &none     &none                 &none
-                &none   &as Q   &as W   &as F   &as P   &as B                                                                            &as J   &as L      &as U    &as Y   &as SQT                 &none
-                &none   &as A   &as R   &as S   &as T   &as G                                                                            &as M   &as N      &as E    &as I     &as O                 &none
-                &none   &as Z   &as X   &as C   &as D   &as V  &kp CAPS           &none        &none   &none      &none    &kp LSHFT     &as K   &as H  &as COMMA  &as DOT  &as FSLH                 &none
-                &none   &none   &none   &none   &none          &mt LCTRL ESC  &mt LALT BSPC    &none   &none  &lt 2 RET    &lt 1 SPACE           &none      &none    &none     &none                 &none
+                &none   &kp Q   &kp W   &kp F   &kp P   &kp B                                                                            &kp J   &kp L      &kp U    &kp Y   &kp SQT                 &none
+                &none   &kp A   &kp R   &kp S   &kp T   &kp G                                                                            &kp M   &kp N      &kp E    &kp I     &kp O                 &none
+                &none   &kp Z   &kp X   &kp C   &kp D   &kp V  &kp LALT           &none        &none   &none      &none    &kp CAPS     &kp K   &kp H  &kp COMMA  &kp DOT  &kp FSLH                 &none
+                &none   &none   &none   &none   &none          &mt LCTRL ESC  &mt LSHFT BSPC   &none   &none  &lt 2 RET    &lt 1 SPACE           &none      &none    &none     &none                 &none
             >;
         };
 
@@ -295,8 +257,8 @@
   &none      &none      &none      &none      &none    &none                                                                            &none     &none     &none     &none      &none   &none
   &none      &none     &kp AT   &kp DLLR   &kp HASH    &none                                                                            &kp BSLH  &kp EXCL  &kp AMPS  &kp PIPE      &none   &none
   &none  &kp UNDER   &kp SEMI  &kp COLON  &kp EQUAL  &kp TAB                                                                            &kp PLUS  &kp LPAR  &kp LBRC  &kp LBKT  &kp MINUS   &none
-  &none      &none  &kp PRCNT  &kp GRAVE  &kp TILDE    &none  &kp CAPS           &none        &none   &none      &none  &kp LSHFT       &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT      &none   &none
-  &none      &none      &none      &none      &none           &mt LCTRL ESC  &mt LALT BSPC    &none   &none  &lt 2 RET    &lt 1 SPACE                &none     &none     &none      &none   &none
+  &none      &none  &kp PRCNT  &kp GRAVE  &kp TILDE    &none  &kp LALT           &none        &none   &none      &none  &kp CAPS        &kp CARET &kp RPAR  &kp RBRC  &kp RBKT      &none   &none
+  &none      &none      &none      &none      &none           &mt LCTRL ESC  &mt LSHFT BSPC   &none   &none  &lt 2 RET    &lt 1 SPACE             &none     &none     &none      &none   &none
             >;
         };
 
@@ -306,8 +268,8 @@
   &none   &none   &none   &none   &none   &none                                                                         &none     &none   &none      &none   &none   &none
   &none   &none  &kp N6  &kp N5  &kp N4   &none                                                                         &none     &none   &none      &none   &none   &none
   &none  &kp N0  &kp N3  &kp N2  &kp N1   &none                                                                         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT   &none   &none
-  &none   &none  &kp N9  &kp N8  &kp N7   &none  &kp CAPS       &none            &none   &none  &none        &kp LSHFT  &none     &kp F5  &kp F6    &kp F12   &none   &none
-  &none   &none   &none   &none   &none          &mt LCTRL ESC  &mt LALT BSPC    &none   &none  &lt 2 RET    &lt 1 SPACE          &none   &none      &none   &none   &none
+  &none   &none  &kp N9  &kp N8  &kp N7   &none  &kp LALT       &none            &none   &none  &none        &kp CAPS   &none     &kp F5  &kp F6    &kp F12   &none   &none
+  &none   &none   &none   &none   &none          &mt LCTRL ESC  &mt LSHFT BSPC   &none   &none  &lt 2 RET    &lt 1 SPACE          &none   &none      &none   &none   &none
             >;
         };
 
