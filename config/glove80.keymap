@@ -287,9 +287,9 @@
             bindings = <
  &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                            &none      &none    &none     &none  &magic LAYER_Magic 0
                 &none   &none   &none   &none   &none   &none                                                                            &none   &none      &none    &none     &none                 &none
-                &none   &kp Q   &kp W   &kp E   &kp R   &kp T                                                                            &kp Y   &kp U      &kp I    &kp O   &kp P                   &LBRC
+                &none   &kp Q   &kp W   &kp E   &kp R   &kp T                                                                            &kp Y   &kp U      &kp I    &kp O   &kp P                   &kp LBRC
                 &none   &kp A   &kp S   &kp D   &kp F   &kp G                                                                            &kp H   &kp J      &kp K    &kp L     &kp SEMI              &kp SQT
-                &none   &kp Z   &kp X   &kp C   &kp V   &kp B  &kp LALT           &none        &none   &none      &none    &kp LALT      &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH                 &RBRC
+                &none   &kp Z   &kp X   &kp C   &kp V   &kp B  &kp LALT           &none        &none   &none      &none    &kp LALT      &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH                 &kp RBRC
                 &none   &none   &none   &none   &none          &lt 1 ESC  &mt LSHFT BSPC   &none   &none  &mt LCTRL RET    &lt 2 SPACE           &none      &none    &none     &none                 &none
             >;
         };
