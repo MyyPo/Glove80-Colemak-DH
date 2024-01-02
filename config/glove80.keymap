@@ -35,6 +35,7 @@
         ukr_eng: ukr_eng {
             label = "UKR_ENG";
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>; 
             bindings = 
                 <&macro_press &tog 3 &kp LSHIFT>,
                 <&macro_tap &kp LALT>,
