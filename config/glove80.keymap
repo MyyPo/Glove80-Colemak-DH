@@ -8,7 +8,8 @@
 #define LAYER_Base 0
 #define LAYER_Symbol 1
 #define LAYER_Nav_Num 2
-#define LAYER_Magic 3
+#define LAYER_Ukr 3
+#define LAYER_Magic 4
 
 &mt {
    tapping-term-ms = <35>;
@@ -32,9 +33,11 @@
             bindings
                 = <&rgb_ug RGB_STATUS>;
         };
-        ukr_eng: ukr_eng {
+        ukr_eng_macro: ukr_eng_macro {
             label = "UKR_ENG";
             compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
             #binding-cells = <0>; 
             bindings = 
                 <&macro_press &tog 3 &kp LSHIFT>,
@@ -252,12 +255,12 @@
 
         layer_Base {
             bindings = <
- &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                            &none      &none    &none     &none  &magic LAYER_Magic 0
-                &none   &none   &none   &none   &none   &none                                                                            &none   &none      &none    &none     &none                 &none
-                &none   &kp Q   &kp W   &kp F   &kp P   &kp B                                                                            &kp J   &kp L      &kp U    &kp Y   &kp SQT                 &none
-                &none   &kp A   &kp R   &kp S   &kp T   &kp G                                                                            &kp M   &kp N      &kp E    &kp I     &kp O                 &none
-                &none   &kp Z   &kp X   &kp C   &kp D   &kp V  &kp LALT           &none        &none   &none      &none    &kp LALT      &kp K   &kp H  &kp COMMA  &kp DOT  &kp FSLH                 &none
-                &none   &none   &none   &none   &none          &lt 1 ESC  &mt LSHFT BSPC   &none   &none  &mt LCTRL RET    &lt 2 SPACE           &none      &none    &none     &none                 &none
+ &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                                             &none      &none    &none     &none  &magic LAYER_Magic 0
+                &none   &none   &none   &none   &none   &none                                                                                             &none   &none      &none    &none     &none                 &none
+                &none   &kp Q   &kp W   &kp F   &kp P   &kp B                                                                                             &kp J   &kp L      &kp U    &kp Y   &kp SQT                 &none
+                &none   &kp A   &kp R   &kp S   &kp T   &kp G                                                                                             &kp M   &kp N      &kp E    &kp I     &kp O                 &none
+                &none   &kp Z   &kp X   &kp C   &kp D   &kp V  &kp LALT           &none        &none   &none      &none    &kp LALT                       &kp K   &kp H  &kp COMMA  &kp DOT  &kp FSLH                 &none
+                &none   &none   &none   &none   &none          &lt 1 ESC  &mt LSHFT BSPC   &ukr_eng_macro   &none  &mt LCTRL RET    &lt 2 SPACE           &none      &none    &none     &none                 &none
             >;
         };
 
@@ -268,7 +271,7 @@
   &none   &kp BSLH  &kp PRCNT   &kp DLLR   &kp HASH    &none                                                        &none     &kp EXCL  &kp AMPS  &kp PIPE   &kp CARET   &none
   &none  &kp UNDER  &kp SEMI   &kp COLON  &kp EQUAL    &kp GRAVE                                                    &kp PLUS  &kp LPAR  &kp LBRC  &kp LBKT   &kp STAR   &none
   &none      &none  &kp AT     &kp MINUS  &kp TILDE    &none  &trans  &none    &none     &none  &none   &trans      &none     &kp RPAR  &kp RBRC  &kp RBKT   &none   &none
-  &none      &none      &none      &none      &none           &trans  &trans   &none     &none  &trans  &trans                &none     &none     &none      &none   &none
+  &none      &none      &none      &none      &none           &trans  &trans   &trans    &none  &trans  &trans                &none     &none     &none      &none   &none
             >;
         };
 
@@ -279,18 +282,18 @@
   &none   &none  &kp N6  &kp N5  &kp N4   &none                                                                 &none     &kp F1    &kp F2     &kp F3    &kp F4  &none
   &none  &kp N0  &kp N3  &kp N2  &kp N1   &none                                                                 &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT &kp TAB &none
   &none   &none  &kp N9  &kp N8  &kp N7   &none  &trans  &none    &none         &none  &none     &trans         &none     &kp F5    &kp F6     &kp F7    &kp F8  &none
-  &none   &none   &none   &none   &none          &trans  &trans   &none         &none  &trans    &trans                   &none     &none      &none     &none   &none
+  &none   &none   &none   &none   &none          &trans  &trans   &trans        &none  &trans    &trans                   &none     &none      &none     &none   &none
             >;
         };
 
         layer_Ukr {
             bindings = <
- &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                            &none      &none    &none     &none  &magic LAYER_Magic 0
-                &none   &none   &none   &none   &none   &none                                                                            &none   &none      &none    &none     &none                 &none
-                &none   &kp Q   &kp W   &kp E   &kp R   &kp T                                                                            &kp Y   &kp U      &kp I    &kp O   &kp P                   &kp LBRC
-                &none   &kp A   &kp S   &kp D   &kp F   &kp G                                                                            &kp H   &kp J      &kp K    &kp L     &kp SEMI              &kp SQT
-                &none   &kp Z   &kp X   &kp C   &kp V   &kp B  &kp LALT           &none        &none   &none      &none    &kp LALT      &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH                 &kp RBRC
-                &none   &none   &none   &none   &none          &lt 1 ESC  &mt LSHFT BSPC   &none   &none  &mt LCTRL RET    &lt 2 SPACE           &none      &none    &none     &none                 &none
+ &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                            &none      &none      &none     &none  &magic LAYER_Magic 0
+                &none   &none   &none   &none   &none   &none                                                                            &none   &none      &none      &none     &none                 &none
+                &none   &kp Q   &kp W   &kp E   &kp R   &kp T                                                                            &kp Y   &kp U      &kp I      &kp O     &kp P                   &kp LBRC
+                &none   &kp A   &kp S   &kp D   &kp F   &kp G                                                                            &kp H   &kp J      &kp K      &kp L     &kp SEMI              &kp SQT
+                &none   &kp Z   &kp X   &kp C   &kp V   &kp B  &trans  &none    &none    &none  &none     &trans                         &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH                 &kp RBRC
+                &none   &none   &none   &none   &none          &trans  &trans   &trans   &none  &trans    &trans                                  &none      &none      &none     &none                 &none
             >;
         };
 
