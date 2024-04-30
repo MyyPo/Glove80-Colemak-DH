@@ -255,56 +255,121 @@
 
         layer_Base {
             bindings = <
- &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                                             &none      &none      &none     &none      &magic LAYER_Magic 0
-                &none   &none   &none   &none   &none   &none                                                                                             &none   &none      &none      &none     &none      &none
-                &none   &kp Q   &kp W   &kp F   &kp P   &kp B                                                                                             &kp J   &kp L      &kp U      &kp Y     &kp SQT    &none
-                &none   &kp A   &kp R   &kp S   &kp T   &kp G                                                                                             &kp M   &kp N      &kp E      &kp I     &kp O      &none
-                &none   &kp Z   &kp X   &kp C   &kp D   &kp V  &kp LALT   &none            &none            &tog 4  &none            &kp LALT             &kp K   &kp H      &kp COMMA  &kp DOT   &kp FSLH   &none
-                &none   &none   &none   &none   &none          &lt 2 ESC  &mt LSHFT BSPC   &ukr_eng_macro   &none   &mt LCTRL RET    &lt 3 SPACE                  &none      &none      &none     &none      &none
+//    ┌────────────────────────┬─────┬─────┬─────┬─────┐                                                                                           ┌─────┬─────┬─────┬─────┬────────────────────────┐
+//    │ &magic laltYER_Magic 0 │     │     │     │     │                                                                                           │     │     │     │     │ &magic laltYER_Magic 0 │
+//    ├────────────────────────┼─────┼─────┼─────┼─────┼─────┐                                                                               ┌─────┼─────┼─────┼─────┼─────┼────────────────────────┤
+//    │                        │     │     │     │     │     │                                                                               │     │     │     │     │     │                        │
+//    ├────────────────────────┼─────┼─────┼─────┼─────┼─────┤                                                                               ├─────┼─────┼─────┼─────┼─────┼────────────────────────┤
+//    │                        │  Q  │  W  │  F  │  P  │  B  │                                                                               │  J  │  L  │  U  │  Y  │  '  │                        │
+//    ├────────────────────────┼─────┼─────┼─────┼─────┼─────┤                                                                               ├─────┼─────┼─────┼─────┼─────┼────────────────────────┤
+//    │                        │  A  │  R  │  S  │  T  │  G  │                                                                               │  M  │  N  │  E  │  I  │  O  │                        │
+//    ├────────────────────────┼─────┼─────┼─────┼─────┼─────┼──────────┬──────────────┬────────────────┐   ┌───────┬─────────────┬──────────┼─────┼─────┼─────┼─────┼─────┼────────────────────────┤
+//    │                        │  Z  │  X  │  C  │  D  │  V  │   lalt   │              │                │   │ tog 4 │             │   lalt   │  K  │  H  │  ,  │  .  │  /  │                        │
+//    ├────────────────────────┼─────┼─────┼─────┼─────┼─────┼──────────┼──────────────┼────────────────┤   ├───────┼─────────────┼──────────┼─────┼─────┼─────┼─────┼─────┼────────────────────────┤
+//    │                        │     │     │     │     │     │ lt 2 esc │ mt lsft bspc │ &ukr_eng_macro │   │       │ mt lctl ent │ lt 3 spc │     │     │     │     │     │                        │
+//    └────────────────────────┴─────┴─────┴─────┴─────┘     └──────────┴──────────────┴────────────────┘   └───────┴─────────────┴──────────┘     └─────┴─────┴─────┴─────┴────────────────────────┘
+  &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                                            &none   &none       &none     &none      &magic LAYER_Magic 0
+  &none                  &none   &none   &none   &none   &none                                                                                            &none   &none   &none       &none     &none      &none               
+  &none                  &kp Q   &kp W   &kp F   &kp P   &kp B                                                                                            &kp J   &kp L   &kp U       &kp Y     &kp SQT    &none               
+  &none                  &kp A   &kp R   &kp S   &kp T   &kp G                                                                                            &kp M   &kp N   &kp E       &kp I     &kp O      &none               
+  &none                  &kp Z   &kp X   &kp C   &kp D   &kp V   &kp LALT    &none            &none                &tog 4   &none           &kp LALT      &kp K   &kp H   &kp COMMA   &kp DOT   &kp FSLH   &none               
+  &none                  &none   &none   &none   &none           &lt 2 ESC   &mt LSHFT BSPC   &ukr_eng_macro       &none    &mt LCTRL RET   &lt 3 SPACE           &none   &none       &none     &none      &none               
             >;
         };
 
         layer_Ukr {
             bindings = <
- &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                             &none      &none      &none     &none  &magic LAYER_Magic 0
-                &none   &none   &none   &none   &none   &none                                                                             &none   &none      &none      &none     &none                 &none
-                &none   &kp A   &kp D   &kp Z   &kp G   &kp COMMA                                                                         &kp Q   &kp K      &kp E      &kp B     &kp SQT               &none
-                &none   &kp F   &kp H   &kp C   &kp N   &kp U                                                                             &kp V   &kp Y      &kp T      &kp S     &kp J                 &none
-                &none   &kp P   &kp M   &kp W   &kp L   &kp DOT  &trans  &none    &none    &trans  &none     &trans                       &kp R   &kp X      &kp I      &kp O     &kp BSLH              &none
-                &none   &none   &none   &none   &none            &trans  &trans   &trans   &none   &trans    &trans                               &none      &none      &none     &none                 &none
+//    ┌────────────────────────┬─────┬─────┬─────┬─────┐                                                   ┌─────┬─────┬─────┬─────┬────────────────────────┐
+//    │ &magic laltYER_Magic 0 │     │     │     │     │                                                   │     │     │     │     │ &magic laltYER_Magic 0 │
+//    ├────────────────────────┼─────┼─────┼─────┼─────┼─────┐                                       ┌─────┼─────┼─────┼─────┼─────┼────────────────────────┤
+//    │                        │     │     │     │     │     │                                       │     │     │     │     │     │                        │
+//    ├────────────────────────┼─────┼─────┼─────┼─────┼─────┤                                       ├─────┼─────┼─────┼─────┼─────┼────────────────────────┤
+//    │                        │  A  │  D  │  Z  │  G  │  ,  │                                       │  Q  │  K  │  E  │  B  │  '  │                        │
+//    ├────────────────────────┼─────┼─────┼─────┼─────┼─────┤                                       ├─────┼─────┼─────┼─────┼─────┼────────────────────────┤
+//    │                        │  F  │  H  │  C  │  N  │  U  │                                       │  V  │  Y  │  T  │  S  │  J  │                        │
+//    ├────────────────────────┼─────┼─────┼─────┼─────┼─────┼─────┬─────┬─────┐   ┌─────┬─────┬─────┼─────┼─────┼─────┼─────┼─────┼────────────────────────┤
+//    │                        │  P  │  M  │  W  │  L  │  .  │     │     │     │   │     │     │     │  R  │  X  │  I  │  O  │  \  │                        │
+//    ├────────────────────────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼────────────────────────┤
+//    │                        │     │     │     │     │     │     │     │     │   │     │     │     │     │     │     │     │     │                        │
+//    └────────────────────────┴─────┴─────┴─────┴─────┘     └─────┴─────┴─────┘   └─────┴─────┴─────┘     └─────┴─────┴─────┴─────┴────────────────────────┘
+  &magic LAYER_Magic 0   &none   &none   &none   &none                                                                                 &none   &none   &none   &none      &magic LAYER_Magic 0
+  &none                  &none   &none   &none   &none   &none                                                                 &none   &none   &none   &none   &none      &none               
+  &none                  &kp A   &kp D   &kp Z   &kp G   &kp COMMA                                                             &kp Q   &kp K   &kp E   &kp B   &kp SQT    &none               
+  &none                  &kp F   &kp H   &kp C   &kp N   &kp U                                                                 &kp V   &kp Y   &kp T   &kp S   &kp J      &none               
+  &none                  &kp P   &kp M   &kp W   &kp L   &kp DOT     &trans   &none    &none        &trans   &none    &trans   &kp R   &kp X   &kp I   &kp O   &kp BSLH   &none               
+  &none                  &none   &none   &none   &none               &trans   &trans   &trans       &none    &trans   &trans           &none   &none   &none   &none      &none               
             >;
         };
 
         layer_Symbol {
             bindings = <
-  &none      &none      &none      &none      &none                                                                            &none     &none     &none      &none   &none
-  &none      &none      &none      &none      &none    &none                                                         &none     &none     &none     &none      &none   &none
-  &none   &kp BSLH  &kp PRCNT   &kp DLLR   &kp HASH    &none                                                         &none     &kp EXCL  &kp AMPS  &kp PIPE   &kp CARET   &none
-  &none  &kp UNDER  &kp SEMI   &kp COLON  &kp EQUAL    &kp GRAVE                                                     &kp PLUS  &kp LPAR  &kp LBRC  &kp LBKT   &kp STAR   &none
-  &none      &none  &kp AT     &kp MINUS  &kp TILDE    &none  &trans  &none    &none     &trans  &none   &trans      &none     &kp RPAR  &kp RBRC  &kp RBKT   &none   &none
-  &none      &none      &none      &none      &none           &trans  &trans   &trans    &none   &trans  &trans                &none     &none     &none      &none   &none
+//    ┌─────┬─────┬─────┬─────┬─────┐                                                   ┌─────┬─────┬─────┬─────┬─────┐
+//    │     │     │     │     │     │                                                   │     │     │     │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┐                                       ┌─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │     │     │     │     │                                       │     │     │     │     │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤                                       ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │  \  │  %  │  $  │  #  │     │                                       │     │  !  │  &  │  |  │  ^  │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤                                       ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │  _  │  ;  │  :  │  =  │  `  │                                       │  +  │  (  │  {  │  [  │  *  │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼─────┬─────┬─────┐   ┌─────┬─────┬─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │  @  │  -  │  ~  │     │     │     │     │   │     │     │     │     │  )  │  }  │  ]  │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │     │     │     │     │     │     │     │   │     │     │     │     │     │     │     │     │     │
+//    └─────┴─────┴─────┴─────┴─────┘     └─────┴─────┴─────┘   └─────┴─────┴─────┘     └─────┴─────┴─────┴─────┴─────┘
+  &none   &none       &none       &none       &none                                                                                        &none      &none      &none      &none       &none
+  &none   &none       &none       &none       &none       &none                                                                 &none      &none      &none      &none      &none       &none
+  &none   &kp BSLH    &kp PRCNT   &kp DLLR    &kp HASH    &none                                                                 &none      &kp EXCL   &kp AMPS   &kp PIPE   &kp CARET   &none
+  &none   &kp UNDER   &kp SEMI    &kp COLON   &kp EQUAL   &kp GRAVE                                                             &kp PLUS   &kp LPAR   &kp LBRC   &kp LBKT   &kp STAR    &none
+  &none   &none       &kp AT      &kp MINUS   &kp TILDE   &none       &trans   &none    &none        &trans   &none    &trans   &none      &kp RPAR   &kp RBRC   &kp RBKT   &none       &none
+  &none   &none       &none       &none       &none                   &trans   &trans   &trans       &none    &trans   &trans              &none      &none      &none      &none       &none
             >;
         };
 
         layer_Nav_Num {
             bindings = <
-  &none   &none   &none   &none   &none                                                                                    &none     &none      &none     &none   &none
-  &none   &none   &none   &none   &none   &none                                                                  &none     &none     &none      &none     &none   &none
-  &none   &none  &kp N6  &kp N5  &kp N4   &none                                                                  &none     &kp F1    &kp F2     &kp F3    &kp F4  &none
-  &none  &kp N0  &kp N3  &kp N2  &kp N1   &none                                                                  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT &kp TAB &none
-  &none   &none  &kp N9  &kp N8  &kp N7   &none  &trans  &none    &none         &trans  &none     &trans         &none     &kp F5    &kp F6     &kp F7    &kp F8  &none
-  &none   &none   &none   &none   &none          &trans  &trans   &trans        &none   &trans    &trans                   &none     &none      &none     &none   &none
+//    ┌─────┬─────┬─────┬─────┬─────┐                                                    ┌──────┬─────┬──────┬─────┬─────┐
+//    │     │     │     │     │     │                                                    │      │     │      │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┐                                       ┌──────┼──────┼─────┼──────┼─────┼─────┤
+//    │     │     │     │     │     │     │                                       │      │      │     │      │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤                                       ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │     │     │  6  │  5  │  4  │     │                                       │      │  f1  │ f2  │  f3  │ f4  │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤                                       ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │     │  0  │  3  │  2  │  1  │     │                                       │ left │ down │ up  │ rght │ tab │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼─────┬─────┬─────┐   ┌─────┬─────┬─────┼──────┼──────┼─────┼──────┼─────┼─────┤
+//    │     │     │  9  │  8  │  7  │     │     │     │     │   │     │     │     │      │  f5  │ f6  │  f7  │ f8  │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼──────┼──────┼─────┼──────┼─────┼─────┤
+//    │     │     │     │     │     │     │     │     │     │   │     │     │     │      │      │     │      │     │     │
+//    └─────┴─────┴─────┴─────┴─────┘     └─────┴─────┴─────┘   └─────┴─────┴─────┘      └──────┴─────┴──────┴─────┴─────┘
+  &none   &none    &none    &none    &none                                                                                 &none      &none    &none       &none     &none
+  &none   &none    &none    &none    &none    &none                                                             &none      &none      &none    &none       &none     &none
+  &none   &none    &kp N6   &kp N5   &kp N4   &none                                                             &none      &kp F1     &kp F2   &kp F3      &kp F4    &none
+  &none   &kp N0   &kp N3   &kp N2   &kp N1   &none                                                             &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp TAB   &none
+  &none   &none    &kp N9   &kp N8   &kp N7   &none   &trans   &none    &none        &trans   &none    &trans   &none      &kp F5     &kp F6   &kp F7      &kp F8    &none
+  &none   &none    &none    &none    &none            &trans   &trans   &trans       &none    &trans   &trans              &none      &none    &none       &none     &none
             >;
         };
 
         layer_Magic {
             bindings = <
-  &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
-       &none            &none            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
-       &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
- &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
-  &sys_reset            &bt_0            &bt_1            &out OUT_USB            &none            &trans   &none   &none       &trans   &none   &trans   &none   &none   &none   &none   &none   &none      &sys_reset
-       &none            &bt_2            &bt_3            &none            &none                   &trans   &trans  &none       &none   &trans   &trans           &none   &none   &none   &none           &none
+//    ┌────────────┬─────────┬─────────┬──────────┬─────────┐                                                       ┌─────┬─────┬─────┬─────┬────────────┐
+//    │   bt_clr   │         │         │          │         │                                                       │     │     │     │     │ bt_clr_ALL │
+//    ├────────────┼─────────┼─────────┼──────────┼─────────┼─────────┐                                       ┌─────┼─────┼─────┼─────┼─────┼────────────┤
+//    │            │         │         │          │         │         │                                       │     │     │     │     │     │            │
+//    ├────────────┼─────────┼─────────┼──────────┼─────────┼─────────┤                                       ├─────┼─────┼─────┼─────┼─────┼────────────┤
+//    │            │ ug_ sp+ │ ug_ sa+ │ ug_ hu+  │ ug_ br+ │ ug_ tog │                                       │     │     │     │     │     │            │
+//    ├────────────┼─────────┼─────────┼──────────┼─────────┼─────────┤                                       ├─────┼─────┼─────┼─────┼─────┼────────────┤
+//    │    boot    │ ug_ sp- │ ug_ sa- │ ug_ hu-  │ ug_ br- │ ug_ eff │                                       │     │     │     │     │     │    boot    │
+//    ├────────────┼─────────┼─────────┼──────────┼─────────┼─────────┼─────┬─────┬─────┐   ┌─────┬─────┬─────┼─────┼─────┼─────┼─────┼─────┼────────────┤
+//    │ &sys_reset │  &bt_0  │  &bt_1  │ out_ usb │         │         │     │     │     │   │     │     │     │     │     │     │     │     │ &sys_reset │
+//    ├────────────┼─────────┼─────────┼──────────┼─────────┼─────────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼────────────┤
+//    │            │  &bt_2  │  &bt_3  │          │         │         │     │     │     │   │     │     │     │     │     │     │     │     │            │
+//    └────────────┴─────────┴─────────┴──────────┴─────────┘         └─────┴─────┴─────┘   └─────┴─────┴─────┘     └─────┴─────┴─────┴─────┴────────────┘
+  &bt BT_CLR    &none             &none             &none             &none                                                                                                &none   &none   &none   &none   &bt BT_CLR_ALL
+  &none         &none             &none             &none             &none             &none                                                                      &none   &none   &none   &none   &none   &none         
+  &none         &rgb_ug RGB_SPI   &rgb_ug RGB_SAI   &rgb_ug RGB_HUI   &rgb_ug RGB_BRI   &rgb_ug RGB_TOG                                                            &none   &none   &none   &none   &none   &none         
+  &bootloader   &rgb_ug RGB_SPD   &rgb_ug RGB_SAD   &rgb_ug RGB_HUD   &rgb_ug RGB_BRD   &rgb_ug RGB_EFF                                                            &none   &none   &none   &none   &none   &bootloader   
+  &sys_reset    &bt_0             &bt_1             &out OUT_USB      &none             &trans            &none    &none    &trans       &none   &trans   &none    &none   &none   &none   &none   &none   &sys_reset    
+  &none         &bt_2             &bt_3             &none             &none                               &trans   &trans   &none        &none   &trans   &trans           &none   &none   &none   &none   &none         
             >;
         };
 
